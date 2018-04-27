@@ -20,6 +20,12 @@ The ms-monetize-sdk SDK is available as an AAR via github. To add the sdk depend
      implementation "com.ms.monetize:sdk-s:2.1.0"
  // MUST add this dependency
      implementation "com.google.code.gson:gson:2.8.2"
+     
+    implementation "com.google.android.gms:play-services-ads:11.8.0"
+    implementation "com.mobpower:mobpower_ad:3.4.1"
+    implementation "com.unity3d.ads:unity-ads:2.1.2"
+    implementation "com.github.vungle:vungle-android-sdk:5.3.2"
+    implementation "com.adcolony:sdk:3.3.0"
  }
  ```
  

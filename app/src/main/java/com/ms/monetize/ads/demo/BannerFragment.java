@@ -30,7 +30,7 @@ public class BannerFragment extends Fragment {
     /**
      * You should use your own **PUB** in production
      */
-    private String PUB = "ms2.1.0@banner";
+    private String PUB = "";
     private java.util.List<String> pubs;
 
     @Override

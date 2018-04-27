@@ -46,7 +46,7 @@ public class NativeFragment extends Fragment {
   /**
    * You should use your own **PUB** in production
    */
-  private String PUB = "ad@native";
+  private String PUB = "";
   private java.util.List<String> pubs;
 
   @Override

@@ -31,7 +31,7 @@ public class InterstitialFragment extends Fragment {
   /**
    * You should use your own **PUB** in production
    */
-  private String PUB = "sge@interstitial";
+  private String PUB = "";
   private java.util.List<String> pubs;
 
 

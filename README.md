@@ -22,7 +22,7 @@ The ms-monetize-sdk SDK is available as an AAR via github. To add the sdk depend
  ```
  
  ### Integrating Third Party Ad
- if you want intergrating `ping start`,you must add following code in your manifest
+ if you want intergrating `Ping Start`,you must add following code in your manifest
  ```java
     //component
      <provider
@@ -55,7 +55,7 @@ The ms-monetize-sdk SDK is available as an AAR via github. To add the sdk depend
 
         <activity android:name="com.pingstart.adsdk.InterstitialAdActivity"/>
 ```
-if you want intergrating `mobpower`,you must add following code in your manifest
+if you want intergrating `Mobpower`,you must add following code in your manifest
 ```java
     <service
       android:name="com.power.PowerService"
@@ -82,7 +82,7 @@ if you want intergrating `mobpower`,you must add following code in your manifest
       </intent-filter>
     </receiver>
 ```
-if you want integrating `admob`,you must add following code in your manifest
+if you want integrating `Admob`,you must add following code in your manifest
 ```java
   <meta-data android:name="com.google.android.gms.version"
       android:value="@integer/google_play_services_version" />

@@ -35,7 +35,7 @@ dependencies {
     implementation 'com.android.support.constraint:constraint-layout:1.1.0'
 
     implementation "com.google.code.gson:gson:2.8.2"
-    implementation "com.ms.monetize:sdk-s:2.1.0"
+    implementation "com.ms.monetize:sdk:2.1.0"
     implementation "com.google.android.gms:play-services-ads:11.8.0"
     implementation "com.mobpower:mobpower_ad:3.4.1"
     implementation "com.unity3d.ads:unity-ads:2.1.2"

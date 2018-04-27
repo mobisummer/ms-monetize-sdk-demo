@@ -13,9 +13,9 @@ buildscript {
 
 allprojects {
     repositories {
-        maven { url VUNGLE_MAVEN_URL }
-        maven { url ADCOLONY_MAVEN_URL }
-        maven { url GOOGLE_MAVEN_URL }
+        google()
+        maven { url "https://jitpack.io" }
+        maven { url "https://adcolony.bintray.com/AdColony" }
         maven { url "https://raw.githubusercontent.com/mobisummer/ms-monetize-sdk/master" }
         jcenter()
     }

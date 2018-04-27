@@ -1,0 +1,22 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.0.1'
+    }
+}
+
+allprojects {
+    repositories {
+        maven { url VUNGLE_MAVEN_URL }
+        maven { url ADCOLONY_MAVEN_URL }
+        maven { url GOOGLE_MAVEN_URL }
+        maven { url "https://raw.githubusercontent.com/mobisummer/ms-monetize-sdk/master" }
+        jcenter()
+    }
+}

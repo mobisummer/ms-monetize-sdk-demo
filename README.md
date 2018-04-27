@@ -1,7 +1,7 @@
 # ms-monetize-sdk-demo
 
 ### Introduce
-SDK aggregated banner,native.interstitial,reward video of these types of ads. SDK will switch different advertising sources according to network status and revenue changes to ensure maximization of revenue.
+SDK aggregated banner,native,interstitial,reward video of these types of ads. SDK will switch different advertising sources according to network status and revenue changes to ensure maximization of revenue.
 
 
 ### Getting Started

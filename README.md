@@ -18,6 +18,8 @@ The ms-monetize-sdk SDK is available as an AAR via github. To add the sdk depend
  dependencies {
  // ... other project dependencies
      implementation "com.ms.monetize:sdk-s:2.1.0"
+ // MUST add this dependency
+     implementation "com.google.code.gson:gson:2.8.2"
  }
  ```
  
@@ -27,36 +29,6 @@ The ms-monetize-sdk SDK is available as an AAR via github. To add the sdk depend
 ```java
   <meta-data android:name="com.google.android.gms.version"
       android:value="@integer/google_play_services_version" />
-```
-
- if you want integrating `Facebook Audience Network`,you must add following code in your `build.gradle`
-```gradle
-
-```
-
- if you want integrating `Vungle`,you must add following code in your `build.gradle`
-```gradle
-
-```
-
- if you want integrating `Unity`,you must add following code in your `build.gradle`
-```gradle
-
-```
-
- if you want integrating `AdColony`,you must add following code in your `build.gradle`
-```gradle
-
-```
-
- if you want integrating `Batmobi`,you must add following code in your `build.gradle`
-```gradle
-
-```
-
- if you want integrating `Batmobi`,you must add following code in your `build.gradle`
-```gradle
-
 ```
 
  if you want intergrating `Ping Start`,you must add following code in your manifest

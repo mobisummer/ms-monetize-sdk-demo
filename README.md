@@ -22,6 +22,43 @@ The ms-monetize-sdk SDK is available as an AAR via github. To add the sdk depend
  ```
  
  ### Integrating Third Party Ad
+ 
+ if you want integrating `Admob`,you must add following code in your manifest
+```java
+  <meta-data android:name="com.google.android.gms.version"
+      android:value="@integer/google_play_services_version" />
+```
+
+ if you want integrating `Facebook Audience Network`,you must add following code in your `build.gradle`
+```gradle
+
+```
+
+ if you want integrating `Vungle`,you must add following code in your `build.gradle`
+```gradle
+
+```
+
+ if you want integrating `Unity`,you must add following code in your `build.gradle`
+```gradle
+
+```
+
+ if you want integrating `AdColony`,you must add following code in your `build.gradle`
+```gradle
+
+```
+
+ if you want integrating `Batmobi`,you must add following code in your `build.gradle`
+```gradle
+
+```
+
+ if you want integrating `Batmobi`,you must add following code in your `build.gradle`
+```gradle
+
+```
+
  if you want intergrating `Ping Start`,you must add following code in your manifest
  ```java
     //component
@@ -55,6 +92,8 @@ The ms-monetize-sdk SDK is available as an AAR via github. To add the sdk depend
 
         <activity android:name="com.pingstart.adsdk.InterstitialAdActivity"/>
 ```
+and add library file to your `libs` folder.
+
 if you want intergrating `Mobpower`,you must add following code in your manifest
 ```java
     <service
@@ -82,12 +121,6 @@ if you want intergrating `Mobpower`,you must add following code in your manifest
       </intent-filter>
     </receiver>
 ```
-if you want integrating `Admob`,you must add following code in your manifest
-```java
-  <meta-data android:name="com.google.android.gms.version"
-      android:value="@integer/google_play_services_version" />
-```
-
 
 ### APPID & PID
 APPID & PID you should contact our business to get.

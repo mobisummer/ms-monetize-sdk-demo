@@ -152,8 +152,8 @@ mInterstitialAd.show();
 ### Reward Video
 #### code
 ```java
-mVideoAd = new VideoAd(getActivity(), “pid”, "userId");//userId from your app,
-and when reward video play end,we will notify you by server-to-server.
+mVideoAd = new VideoAd(getActivity(), “pid”, "userId");
+//userId from your app,and when reward video play end,we will notify you by server-to-server.
 
 mVideoAd.init();//it will preload video
 

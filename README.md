@@ -17,7 +17,7 @@ The ms-monetize-sdk SDK is available as an AAR via github. To add the sdk depend
 
  dependencies {
  // ... other project dependencies
-     implementation "com.ms.monetize:sdk-s:2.1.0"
+     implementation "com.ms.monetize:sdk:2.1.0"
  // MUST add this dependency
      implementation "com.google.code.gson:gson:2.8.2"
      

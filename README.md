@@ -11,6 +11,10 @@ The ms-monetize-sdk SDK is available as an AAR via github. To add the sdk depend
  repositories {
      // ... other project repositories
      maven { url "https://raw.githubusercontent.com/mobisummer/ms-monetize-sdk/master" }
+     // adcolony ad sdk maven repository
+     maven { url 'https://adcolony.bintray.com/AdColony' }
+     // vungle ad sdk maven repository
+     maven { url 'https://jitpack.io' }
  }
 
  // ...

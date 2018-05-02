@@ -178,7 +178,7 @@ mVideoAd.show()//when ad loaded,you may call it to show ad
 ```
 
 #### server-to-server
-your shoul contact our business to set call back url .
+your should contact our business to set call back url .
 
 
 

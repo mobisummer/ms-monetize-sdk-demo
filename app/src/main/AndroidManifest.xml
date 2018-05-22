@@ -20,6 +20,15 @@
             </intent-filter>
         </activity>
 
+        <receiver android:name="com.etap.EtapBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+
 
         <provider
             android:name="com.pingstart.adsdk.provider.PreferencesProvider"

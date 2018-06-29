@@ -102,7 +102,17 @@ if you want intergrating `Mobpower`,you must add following code in your manifest
       </intent-filter>
     </receiver>
 ```
+if you want intergrating `BatMObi`,you must add following code in your manifest
+```java
+   <receiver android:name="com.etap.EtapBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
 
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+ ```
 ### APPID & PID
 APPID & PID you should contact our business to get.
 

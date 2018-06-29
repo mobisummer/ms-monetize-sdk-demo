@@ -1,45 +1,50 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 26
-    defaultConfig {
-        applicationId "com.ms.monetize.ads.demo"
-        minSdkVersion 15
-        targetSdkVersion 26
-        versionCode 10
-        versionName "2.1.0"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+  signingConfigs {
+    config {
+      keyAlias 'demo'
+      keyPassword '123456'
+      storeFile file('../demo.keystore')
+      storePassword '123456'
     }
-    buildTypes {
-        release {
-            minifyEnabled true
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-        }
+  }
+  compileSdkVersion 27
+  defaultConfig {
+    applicationId "com.ms.monetize.ads.demo"
+    minSdkVersion 16
+    targetSdkVersion 27
+    versionCode 11
+    versionName "3.0.0"
+    testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+  }
+  buildTypes {
+    release {
+      minifyEnabled true
+      signingConfig signingConfigs.config
+      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+    }
 
-        debug {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-        }
+    debug {
+      minifyEnabled true
+      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
     }
+  }
+  productFlavors {
+  }
 }
 
 repositories {
-    flatDir {
-        dirs 'libs' //this way we can find the .aar file in libs folder
-    }
+  flatDir {
+    dirs 'libs' //this way we can find the .aar file in libs folder
+  }
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'com.android.support:appcompat-v7:26.1.0'
-    implementation 'com.android.support.constraint:constraint-layout:1.1.0'
-
-    implementation "com.google.code.gson:gson:2.8.2"
-    implementation "com.google.android.gms:play-services-ads:11.8.0"
-    implementation "com.mobpower:mobpower_ad:3.4.1"
-    implementation "com.unity3d.ads:unity-ads:2.1.2"
-    implementation "com.github.vungle:vungle-android-sdk:5.3.2"
-    implementation "com.adcolony:sdk:3.3.0"
-//    implementation (name: 'ms-monetize-sdk-2.1.0', ext: 'aar')
-
+  implementation 'com.android.support:appcompat-v7:27.1.1'
+  implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+  //gson
+  implementation 'com.google.code.gson:gson:2.8.5'
+  implementation 'com.ms.small:small:0.0.8'
+  implementation 'com.ms.monetize:sdk:3.0.0'
 }

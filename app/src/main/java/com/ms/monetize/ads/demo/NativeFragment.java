@@ -22,7 +22,6 @@ import com.ms.monetize.ads.AdError;
 import com.ms.monetize.ads.AdListener;
 import com.ms.monetize.ads.AdRequest;
 import com.ms.monetize.ads.ImageDownloader;
-import com.ms.monetize.ads.ImageFilter;
 import com.ms.monetize.ads.NativeAd;
 import com.ms.monetize.ads.NativeAdAssets;
 
@@ -58,6 +57,7 @@ public class NativeFragment extends Fragment {
 
     pubs = new java.util.ArrayList<>();
     pubs.add("ms2.1.0@native_admob");
+    pubs.add("ms2.1.0@native_adtiming");
     pubs.add("ms2.1.0@native_ping_start");
     pubs.add("ms2.1.0@native_batmobi");
     pubs.add("ms2.1.0@native_mobpower");
@@ -68,13 +68,17 @@ public class NativeFragment extends Fragment {
 
   private void initView() {
     android.widget.Spinner spinner = new android.widget.Spinner(getActivity());
-    android.widget.ArrayAdapter<String> adapter =
-            new android.widget.ArrayAdapter<>(getActivity(), android.R.layout.simple_spinner_item, pubs);
+    android.widget.ArrayAdapter<String> adapter = new android.widget.ArrayAdapter<>(getActivity(),
+                                                                                    android.R.layout.simple_spinner_item,
+                                                                                    pubs);
     adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
     spinner.setAdapter(adapter);
     spinner.setOnItemSelectedListener(new android.widget.AdapterView.OnItemSelectedListener() {
       @Override
-      public void onItemSelected(android.widget.AdapterView<?> parent, View view, int position, long id) {
+      public void onItemSelected(android.widget.AdapterView<?> parent,
+                                 View view,
+                                 int position,
+                                 long id) {
         PUB = pubs.get(position);
         if (PUB == null || PUB.equals("")) {
           return;
@@ -159,7 +163,7 @@ public class NativeFragment extends Fragment {
         mBtnShow.setEnabled(false);
         mTvStatus.setText(getString(R.string.ad_start_loading));
 
-        AdRequest request = AdRequest.newBuilder().pid(PUB).testDeviceId("").build();
+        AdRequest request = AdRequest.newBuilder().pid(PUB).build();
         mNativeAd.loadAd(request);
       }
     });
@@ -195,14 +199,7 @@ public class NativeFragment extends Fragment {
         }
         // cover
         {
-          if (assets.getCovers() != null) {
-            for (NativeAdAssets.Image image : assets.getCovers()) {
-            }
-          }
-          NativeAdAssets.Image cover = ImageFilter.filter(assets.getCovers(), 600, 314);
-          if (cover == null) {
-            cover = assets.getCover();
-          }
+          NativeAdAssets.Image cover = assets.getCover();
           BitmapDrawable fallback = new BitmapDrawable(getResources(),
                                                        BitmapFactory.decodeResource(getResources(),
                                                                                     R.drawable.cover_stub));

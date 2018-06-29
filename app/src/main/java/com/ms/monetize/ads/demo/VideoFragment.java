@@ -42,8 +42,9 @@ public class VideoFragment extends Fragment {
     super.onCreate(savedInstanceState);
 
     pubs = new ArrayList<>();
-    pubs.add("ms2.1.0@rewardVideo_vungle");
     pubs.add("ms2.1.0@rewardVideo_adcolony");
+    pubs.add("ms2.1.0@rewardVideo_adtiming");
+    pubs.add("ms2.1.0@rewardVideo_vungle");
     pubs.add("ms2.1.0@rewardVideo_unity");
 
     initView();

@@ -1,7 +1,7 @@
 package com.ms.monetize.ads.demo;
 
 import android.app.Application;
-import android.widget.Toast;
+import android.util.Log;
 
 import com.ms.monetize.ads.AdError;
 import com.ms.monetize.ads.MsAdsSdk;
@@ -13,17 +13,15 @@ public class MsAdsDemoApp extends Application {
 
   @Override
   public void onCreate() {
-    super.onCreate();
-
     MsAdsSdk.start(this, "ms2.1.0@monetize", new StartupListener() {
       @Override
       public void onSuccess() {
-        Toast.makeText(MsAdsDemoApp.this,"success",Toast.LENGTH_LONG).show();
+        Log.i(TAG, "onSuccess: ");
       }
 
       @Override
       public void onFailed(AdError adError) {
-        Toast.makeText(MsAdsDemoApp.this,"failed",Toast.LENGTH_LONG).show();
+        Log.e(TAG, "onFailed: " + adError.getErrorMessage());
       }
     });
   }

@@ -45,6 +45,8 @@ public class InterstitialFragment extends Fragment {
 
     pubs = new java.util.ArrayList<>();
     pubs.add("ms2.1.0@interstitial_admob");
+    pubs.add("ms2.1.0@interstitial_facebook");
+    pubs.add("ms2.1.0@interstitial_adtiming");
     pubs.add("ms2.1.0@interstitial_ping_start");
     pubs.add("ms2.1.0@interstitial_batmobi");
     pubs.add("ms2.1.0@interstitial_mobpower");
@@ -55,13 +57,17 @@ public class InterstitialFragment extends Fragment {
 
   private void initView() {
     android.widget.Spinner spinner = new android.widget.Spinner(getActivity());
-    android.widget.ArrayAdapter<String> adapter =
-            new android.widget.ArrayAdapter<>(getActivity(), android.R.layout.simple_spinner_item, pubs);
+    android.widget.ArrayAdapter<String> adapter = new android.widget.ArrayAdapter<>(getActivity(),
+                                                                                    android.R.layout.simple_spinner_item,
+                                                                                    pubs);
     adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
     spinner.setAdapter(adapter);
     spinner.setOnItemSelectedListener(new android.widget.AdapterView.OnItemSelectedListener() {
       @Override
-      public void onItemSelected(android.widget.AdapterView<?> parent, View view, int position, long id) {
+      public void onItemSelected(android.widget.AdapterView<?> parent,
+                                 View view,
+                                 int position,
+                                 long id) {
         PUB = pubs.get(position);
         if (PUB == null || PUB.equals("")) {
           return;

@@ -1,5 +1,5 @@
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
-  <string name="app_name">MsDemo</string>
+  <string name="app_name">MonetizeDemo</string>
   <string name="ad_start_loading">Start loading Ad&#8230;</string>
   <string name="ad_load_success">Load Ad Success</string>
   <string name="ad_clicked">Ad Clicked</string>

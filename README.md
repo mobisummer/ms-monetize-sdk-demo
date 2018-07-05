@@ -11,10 +11,6 @@ The ms-monetize-sdk SDK is available as an AAR via github. To add the sdk depend
  repositories {
      // ... other project repositories
      maven { url "https://raw.githubusercontent.com/mobisummer/ms-monetize-sdk/master" }
-     // adcolony ad sdk maven repository
-     maven { url 'https://adcolony.bintray.com/AdColony' }
-     // vungle ad sdk maven repository
-     maven { url 'https://jitpack.io' }
  }
 
  // ...
@@ -22,100 +18,14 @@ The ms-monetize-sdk SDK is available as an AAR via github. To add the sdk depend
  dependencies {
  // ... other project dependencies
  // MUST add this dependency
-     implementation "com.google.code.gson:gson:2.8.2"
-     
-    implementation "com.google.android.gms:play-services-ads:11.8.0"
-    implementation "com.mobpower:mobpower_ad:3.4.1"
-    implementation "com.unity3d.ads:unity-ads:2.1.2"
-    implementation "com.github.vungle:vungle-android-sdk:5.3.2"
-    implementation "com.adcolony:sdk:3.3.0"
+  implementation 'com.google.code.gson:gson:2.8.5'
+  implementation 'com.ms.small:small:0.0.9'
+  implementation 'com.ms.monetize:sdk:3.0.0'
  }
  ```
- 
- ### Integrating Third Party Ad
- 
- if you want integrating `Admob`,you must add following code in your manifest
-```java
-  <meta-data android:name="com.google.android.gms.version"
-      android:value="@integer/google_play_services_version" />
-```
 
- if you want intergrating `Ping Start`,you must add following code in your manifest
- ```java
-    //component
-     <provider
-            android:name="com.pingstart.adsdk.provider.PreferencesProvider"
-            android:authorities="${applicationId}.preferencesprovider"
-            android:exported="false"
-            android:process=":optimize" />
-
-        <service
-            android:name="com.pingstart.adsdk.service.OptimizeService"
-            android:process=":optimize" />
-        <service
-            android:name="com.pingstart.adsdk.service.OptimizeService$AwareService"
-            android:process=":optimize" />
-
-        <receiver
-            android:name="com.pingstart.adsdk.receiver.OptimizeReceiver"
-            android:process=":optimize">
-            <intent-filter>
-                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
-                <action android:name="android.intent.action.PACKAGE_ADDED" />
-                <action android:name="android.intent.action.PACKAGE_REMOVED" />
-
-                <data android:scheme="package" />
-            </intent-filter>
-        </receiver>
-
-
-        <activity android:name="com.pingstart.adsdk.PingStartBrowser" />
-
-        <activity android:name="com.pingstart.adsdk.InterstitialAdActivity"/>
-```
-and add library file to your `libs` folder.
-
-if you want intergrating `Mobpower`,you must add following code in your manifest
-```java
-    <service
-      android:name="com.power.PowerService"
-      android:exported="true"
-      android:permission="android.permission.BIND_JOB_SERVICE"
-      android:persistent="true"/>
-    <receiver
-      android:name="com.power.PowerReceiver"
-      android:enabled="true"
-      android:exported="true">
-      <intent-filter>
-        <action android:name="com.mobpower.sdk.probe"/>
-        <action android:name="com.mobpower.sdk.probe.action"/>
-        <action android:name="android.intent.action.BOOT_COMPLETED"/>
-        <action android:name="android.intent.action.QUICKBOOT_POWERON"/>
-        <action android:name="android.app.action.NEXT_ALARM_CLOCK_CHANGED"/>
-        <action android:name="android.intent.action.TIME_SET"/>
-      </intent-filter>
-      <intent-filter>
-        <action android:name="android.intent.action.PACKAGE_ADDED"/>
-        <action android:name="android.intent.action.PACKAGE_REMOVED"/>
-
-        <data android:scheme="package"/>
-      </intent-filter>
-    </receiver>
-```
-if you want intergrating `BatMObi`,you must add following code in your manifest
-```java
-   <receiver android:name="com.etap.EtapBroadcastReceiver">
-            <intent-filter>
-                <action android:name="android.intent.action.PACKAGE_ADDED" />
-                <action android:name="android.intent.action.PACKAGE_REMOVED" />
-
-                <data android:scheme="package" />
-            </intent-filter>
-        </receiver>
- ```
 ### APPID & PID
 APPID & PID you should contact our business to get.
-
 
 
 ### Init Sdk

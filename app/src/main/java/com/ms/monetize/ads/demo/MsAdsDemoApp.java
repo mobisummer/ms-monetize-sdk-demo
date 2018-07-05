@@ -13,6 +13,7 @@ public class MsAdsDemoApp extends Application {
 
   @Override
   public void onCreate() {
+    super.onCreate();
     MsAdsSdk.start(this, "ms2.1.0@monetize", new StartupListener() {
       @Override
       public void onSuccess() {

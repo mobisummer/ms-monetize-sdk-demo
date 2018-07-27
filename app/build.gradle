@@ -14,8 +14,8 @@ android {
     applicationId "com.ms.monetize.ads.demo"
     minSdkVersion 16
     targetSdkVersion 27
-    versionCode 12
-    versionName "3.0.1"
+    versionCode 36
+    versionName "3.1.5"
     testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
   }
   buildTypes {
@@ -43,8 +43,9 @@ repositories {
 dependencies {
   implementation 'com.android.support:appcompat-v7:27.1.1'
   implementation 'com.android.support.constraint:constraint-layout:1.1.2'
-  //gson
+
   implementation 'com.google.code.gson:gson:2.8.5'
   implementation 'com.ms.small:small:0.0.9'
-  implementation 'com.ms.monetize:sdk:3.0.0'
+  implementation 'com.ms.monetize:sdk:3.1.5-small'
+
 }

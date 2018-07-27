@@ -15,8 +15,8 @@ public class MsAdsSdkActivity extends FragmentActivity implements ActionBar.TabL
   private ActionBar mActionBar;
 
   private String[] mTagNameArray = {
-    "Banner", "Interstitial", "Native","Video",
-  };
+      "Banner", "Interstitial", "Native", "Video",
+      };
 
   @Override
   public void onCreate(Bundle savedInstanceState) {
@@ -52,6 +52,9 @@ public class MsAdsSdkActivity extends FragmentActivity implements ActionBar.TabL
                                               ViewGroup.LayoutParams.MATCH_PARENT));
 
     mActionBar = getActionBar();
+    mActionBar.setTitle(String.format("%s(%s)",
+                                      getString(R.string.app_name),
+                                      BuildConfig.VERSION_NAME));
     mActionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
     for (String tabName : mTagNameArray) {
       mActionBar.addTab(mActionBar.newTab().setText(tabName).setTabListener(this));

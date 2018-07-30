@@ -42,7 +42,6 @@ public class InterstitialFragment extends Fragment {
     mInterstitialAd = new InterstitialAd(getActivity());
     mInterstitialAd.setAdListener(mAdListener);
 
-
     pubs = new java.util.ArrayList<>();
     pubs.add("ms2.1.0@interstitial_admob");
     pubs.add("ms2.1.0@interstitial_facebook");
@@ -50,6 +49,7 @@ public class InterstitialFragment extends Fragment {
     pubs.add("ms2.1.0@interstitial_ping_start");
     pubs.add("ms2.1.0@interstitial_batmobi");
     pubs.add("ms2.1.0@interstitial_mobpower");
+    pubs.add("ms2.1.0@interstitial_mscps");
 
     initView();
     initAction();

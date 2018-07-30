@@ -47,6 +47,7 @@ public class BannerFragment extends Fragment {
     pubs.add("ms2.1.0@banner_ping_start");
     pubs.add("ms2.1.0@banner_batmobi");
     pubs.add("ms2.1.0@banner_mobpower");
+    pubs.add("ms2.1.0@banner_mscps");
 
     initView();
     initAction();

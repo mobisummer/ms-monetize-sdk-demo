@@ -20,7 +20,7 @@ The ms-monetize-sdk SDK is available as an AAR via github. To add the sdk depend
  // MUST add this dependency
   implementation 'com.google.code.gson:gson:2.8.5'
   implementation 'com.ms.small:small:0.0.9'
-  implementation 'com.ms.monetize:sdk:3.0.0'
+  implementation 'com.ms.monetize:sdk:3.1.5-small'
  }
  ```
 

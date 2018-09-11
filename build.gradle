@@ -17,6 +17,7 @@ allprojects {
         maven { url "https://jitpack.io" }
         maven { url "https://adcolony.bintray.com/AdColony" }
         maven { url "https://raw.githubusercontent.com/mobisummer/ms-monetize-sdk/master" }
+        maven { url "https://raw.githubusercontent.com/mobisummer/cps-sdk/master" }
         jcenter()
     }
 }

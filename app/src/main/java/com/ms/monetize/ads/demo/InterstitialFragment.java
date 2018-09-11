@@ -50,6 +50,7 @@ public class InterstitialFragment extends Fragment {
     pubs.add("ms2.1.0@interstitial_ping_start");
     pubs.add("ms2.1.0@interstitial_batmobi");
     pubs.add("ms2.1.0@interstitial_mobpower");
+    pubs.add("ms2.1.0@interstitial_mscps");
 
     initView();
     initAction();
